@@ -10,15 +10,16 @@ const setStoredTables = (tables: StoredTables) => {
   localStorage.setItem('myTables', JSON.stringify(tables))
 }
 
-export const occupyTable = async (tableId: number) => {
-  const res = await api.post(`/tables/${tableId}/occupy`)
+export const occupyTable = async (tableId: string) => {
+  const res = await api.post(`/tables/occupy/${tableId}`)
+  const tableNumber = res.data.tableNumber
   const salt = res.data.salt
 
   const stored = getStoredTables()
-  stored[tableId] = salt
+  stored[tableNumber] = salt
   setStoredTables(stored)
 
-  return salt
+  return {salt, tableNumber}
 }
 
 export const unoccupyTable = async (tableId: number) => {
@@ -27,7 +28,7 @@ export const unoccupyTable = async (tableId: number) => {
 
   if (!salt) throw new Error("You can't unoccupy this table.")
 
-  const res = await api.post(`/tables/${tableId}/unoccupy`, { salt })
+  const res = await api.post(`/tables/unoccupy/${tableId}`, { salt })
   
   delete stored[tableId]
   setStoredTables(stored)

@@ -1,0 +1,15 @@
+.container {
+  padding: 16px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
