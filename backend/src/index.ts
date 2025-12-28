@@ -4,7 +4,10 @@ import tableRoutes from './routes/tables'
 
 const app = express()
 
-app.use(cors())
+app.use(cors({
+  origin: 'http://localhost:3000',
+  credentials: true
+}))
 app.use(express.json())
 
 app.get('/api/status', (_req, res) => {
