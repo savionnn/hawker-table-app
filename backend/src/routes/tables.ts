@@ -4,7 +4,7 @@ import {getTables, occupyTable, unoccupyTable} from '../controllers/tableControl
 const router = Router()
 
 router.get('/', getTables)
-router.post('/:id/occupy', occupyTable)
-router.post('/:id/unoccupy', unoccupyTable)
+router.post('/occupy/:id', occupyTable)
+router.post('/unoccupy/:id', unoccupyTable)
 
 export default router

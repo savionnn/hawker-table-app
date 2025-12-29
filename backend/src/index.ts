@@ -4,7 +4,10 @@ import tableRoutes from './routes/tables'
 
 const app = express()
 
-app.use(cors())
+app.use(cors({
+  origin: 'http://localhost:3000',
+  credentials: true
+}))
 app.use(express.json())
 
 app.get('/api/status', (_req, res) => {
@@ -13,7 +16,7 @@ app.get('/api/status', (_req, res) => {
 
 app.use('/api/tables', tableRoutes)
 
-const PORT = 3000
+const PORT = 3001
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`)
 })
