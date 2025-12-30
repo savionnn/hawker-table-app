@@ -1,15 +1,96 @@
 .container {
-  padding: 16px;
+    padding: 32px;
+    max-width: 400px;
+    margin: 0 auto;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
 }
 
-h1 {
-  text-align: center;
-  margin-bottom: 16px;
+.header {
+    text-align: center;
+}
+
+.title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0;
+    color: #34466d;
+}
+
+.hawkerName {
+    font-size: 1rem;
+    color: #34466d;
+}
+
+.summary {
+    width: 100%;
+    height: 4rem;
+    background-color: #dee6f6;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 12px;
+    gap: 24px;
+}
+
+.summaryItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+.freeCount {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #5b6fa6;
+}
+
+.occupiedCount {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #34466d;
+}
+
+.label {
+    font-size: 1rem;
+    color: #34466d;
+}
+
+.note {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #34466d;
+    margin-bottom: 16px;
 }
 
 .grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+.myTablesButton {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.25rem;
+    background: #34466d;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.spinner {
+    width: 64px;
+    height: 64px;
+    border: 6px solid #e5e7eb;
+    border-top: 6px solid #34466d;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
 }
