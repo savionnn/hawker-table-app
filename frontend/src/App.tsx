@@ -6,7 +6,7 @@ import { MyTablesPage } from './pages/MyTablesPage/MyTablesPage.tsx'
 import './global.css'
 function App() {
   return (
-    <Router>
+    <Router basename="/">
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/my-tables" element={<MyTablesPage />} />
