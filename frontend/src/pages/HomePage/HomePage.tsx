@@ -16,8 +16,17 @@ export const HomePage: React.FC = () => {
     }, [])
 
 
-    if (loading) return <div className={styles.spinner}></div>
-
+    if (loading) 
+        return (
+    <div className={styles.container}>
+        <header className={styles.header}>
+            <h1 className={styles.title}>Hawker Table Tracker</h1>
+            <p className={styles.hawkerName}>ABC Food Centre</p>
+        </header>
+        <div className={styles.spinner}></div>
+        <p className={styles.note}>Please wait 20-30 seconds for the free server to load.</p>
+    </div>
+    )
     return (
         <div className={styles.container}>
             <header className={styles.header}>
