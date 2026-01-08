@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import { HomePage } from './pages/HomePage/HomePage.tsx'
 import { OccupyPage } from "./pages/OccupyPage/OccupyPage.tsx"
 import { UnoccupyPage } from './pages/UnoccupyPage/UnoccupyPage.tsx'
